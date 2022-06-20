@@ -5,7 +5,7 @@ from settings import Settings
 import biblioteka_functions as bf
 
 def start_gruzon():
-    # Создаём обьект экрана
+    # Создаём обьект экранап
     pygame.init()
     gz_settings = Settings()
     screen = pygame.display.set_mode((
@@ -13,6 +13,9 @@ def start_gruzon():
         gz_settings.screen_height,
         ))
     pygame.display.set_caption('GruZon')
+    screen_icon = pygame.image.load(gz_settings.screen_icon)
+    pygame.display.set_icon(screen_icon)
+
 
     while True:
         # Отслеживание клавиатуры и мышки
